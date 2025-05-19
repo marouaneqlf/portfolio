@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CV - Marouane Bouftama</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #aaa;
+            margin-bottom: 32px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #7d4cff;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 10px;
+            box-shadow: 0 4px 20px rgba(125, 76, 255, 0.3);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(125, 76, 255, 0.4);
+        }
+        .button.outline {
+            background-color: transparent;
+            border: 2px solid #7d4cff;
+            color: #7d4cff;
+            box-shadow: none;
+        }
+        .button.outline:hover {
+            background-color: rgba(125, 76, 255, 0.1);
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #7d4cff, #4f35a3);
+            opacity: 0.1;
+        }
+        .circle-1 {
+            width: 700px;
+            height: 700px;
+            top: -350px;
+            left: -100px;
+        }
+        .circle-2 {
+            width: 500px;
+            height: 500px;
+            bottom: -250px;
+            right: -100px;
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+            .button {
+                font-size: 14px;
+                padding: 10px 20px;
+                margin: 6px;
+            }
+            .circle-1 {
+                width: 400px;
+                height: 400px;
+            }
+            .circle-2 {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+    
+    <div class="container">
+        <h1>CV de Marouane Bouftama</h1>
+        <p>Développeur Full-Stack React & C#</p>
+        
+        <div class="buttons-container">
+            <a href="Black Modern Professional Resume.pdf" class="button" download="CV_Marouane_Bouftama.pdf">Télécharger le CV</a>
+            <a href="javascript:history.back()" class="button outline">Retour au Portfolio</a>
+        </div>
+    </div>
+    
+    <script>
+        // Redirection automatique après un court délai
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                window.location.href = 'Black Modern Professional Resume.pdf';
+            }, 3000);
+        });
+    </script>
+</body>
+</html> 
